@@ -17,11 +17,18 @@ const Navbar = () => {
                     className='object-contain '
                 />
             </Link>
+            <div className='flex space-x-5'>
+            <CustomButton
+                title="Add Listing"
+                btnType="button"
+                containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]" 
+            />
             <CustomButton
                 title="Sign In"
                 btnType="button"
                 containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]" 
             />
+            </div>
         </nav>
     </header>
   )
