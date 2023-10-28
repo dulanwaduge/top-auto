@@ -2,12 +2,14 @@ import Image from 'next/image'
 import { Hero } from '@/components'
 import {CustomFilter} from '@/components'
 import {SearchBar, CarCard} from '@/components'
-import { fetchCars } from '@/utils'
-
+import  connectMongo from '../utils/connectMongo'
+import Car from '@/models/cars'
+//import addCar from '@/utils/mongoMethods'
 
 export default async function Home() {
-  const allCars = await fetchCars();
-
+  await connectMongo();
+  
+  const allCars = "";
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (

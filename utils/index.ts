@@ -1,11 +1,53 @@
-// api call to fetch cars
-export async function fetchCars(){
-    const headers = {
-        'X-RapidAPI-Key': '1f753e8533msh92d11a027dcf6cdp167449jsn7b4384de9200',
-        'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
-    }
-    const response = await fetch ('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla', {headers: headers,});
+// import { MongoClient } from "mongodb";
+// import mongoose from "mongoose";
 
-    const result = await response.json();
-    return result;
-}
+// const uri = 'mongodb+srv://admin:topautoadmin@topauto-cluster.l1315mg.mongodb.net/?retryWrites=true&w=majority';
+// const db = mongoose.connection;
+
+// export async function connectDatabase() {
+//     mongoose.connect(uri, {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true,
+//     });
+
+//     db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+//     db.once('open', () => {
+//         console.log('Connected to MongoDB');
+//     });
+// }
+
+
+// export async function addCar(){
+//     db.on('error', (err) => {
+//         console.error(`Connection error: ${err}`);
+//       });
+      
+//       db.once('open', async () => {
+//         try {
+//           // Create a new car
+//           const newCarData: Car = {
+//             make: 'Toyota',
+//             model: 'Camry',
+//             year: 2023,
+//             color: 'Blue',
+//             price: 25000,
+//             mileage: 15000,
+//             fuelType: 'Gasoline',
+//             transmission: 'Automatic',
+//           };
+      
+//           const newCar = new Car(newCarData);
+      
+//           // Save the new car to the database
+//           const savedCar = await newCar.save();
+      
+//           console.log('Car added successfully:');
+//           console.log(savedCar);
+      
+//           // Close the database connection
+//           mongoose.connection.close();
+//         } catch (error) {
+//           console.error(`Error adding car: ${error}`);
+//         }
+//     });
+// }
